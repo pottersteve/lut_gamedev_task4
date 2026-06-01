@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="task4"
-run/main_scene="uid://dxmnvgryjflvy"
+run/main_scene="uid://clye0cup3junc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
