@@ -1,0 +1,26 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5k3xwq1kdb6h"]
+
+[ext_resource type="PackedScene" uid="uid://wmh2f21m1jpq" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://dy5emw44yitmj" path="res://Scripts/game.gd" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://clye0cup3junc" path="res://Scenes/level1.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dssttcgwy3nfe" path="res://Scenes/coin.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://f0ek174ffmu4" path="res://Scenes/level2.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://dxmnvgryjflvy" path="res://Scenes/empty.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://y1vy1hiewlrj" path="res://Scenes/spike.tscn" id="7_6bp64"]
+
+[node name="game" type="Node"]
+script = ExtResource("1_kry3j")
+levels = Array[String](["uid://clye0cup3junc", "uid://f0ek174ffmu4"])
+
+[node name="Player" parent="." instance=ExtResource("1_jjgbg")]
+
+[node name="Coin" parent="." instance=ExtResource("3_8gbba")]
+
+[node name="Level1" parent="." instance=ExtResource("2_bo1nx")]
+
+[node name="Level2" parent="." instance=ExtResource("4_jjvhh")]
+position = Vector2(1285, 1)
+
+[node name="empty" parent="." instance=ExtResource("6_21xkr")]
+
+[node name="Spike" parent="." instance=ExtResource("7_6bp64")]
